@@ -12,15 +12,17 @@ def sum_n(n):
     return sum_n(n-1)+n
 
 def print_n(s,n):
-  if(n>0):
+  if(n==1):
+    print(s)
+  elif(n!=0):
     print(s)
     print_n(s,n-1)
 
-sum_n(5)
+
 
 def run():
   n=int(input("Enter an int: "))
-  print("sum is: "+sum_n(n)+".")
+  print("sum is "+str(sum_n(n))+".")
   s=input("Enter a string: ")
   print_n(s,n)
 
